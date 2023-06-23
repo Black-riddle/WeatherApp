@@ -57,3 +57,16 @@ struct AdditionalWeatherData {
             ]
         }
 }
+
+//enum weatherDetails {
+//
+//    case pressure
+//    case humidity
+//    case windSpeed
+//    case feelsLike
+//
+//    var title = {
+//
+//    }
+//    var unit
+//}

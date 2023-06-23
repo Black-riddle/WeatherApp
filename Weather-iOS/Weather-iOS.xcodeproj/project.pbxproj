@@ -22,7 +22,6 @@
 		FAE8C3B82A4308A30081C9E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE8C3B72A4308A30081C9E3 /* Assets.xcassets */; };
 		FAE8C3BB2A4308A30081C9E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE8C3B92A4308A30081C9E3 /* LaunchScreen.storyboard */; };
 		FAE8C3C42A4309570081C9E3 /* Weather_Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE8C3C32A4309570081C9E3 /* Weather_Kit.framework */; };
-		FAE8C3C52A4309570081C9E3 /* Weather_Kit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAE8C3C32A4309570081C9E3 /* Weather_Kit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAE8C3D22A4347650081C9E3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8C3D12A4347650081C9E3 /* ViewModel.swift */; };
 		FAE8C3D82A435E5E0081C9E3 /* CityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8C3D72A435E5E0081C9E3 /* CityDetailsViewController.swift */; };
 		FAE8C3DA2A435E760081C9E3 /* CityDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8C3D92A435E760081C9E3 /* CityDetailsViewModel.swift */; };
@@ -32,20 +31,6 @@
 		FAE8C3E32A4364420081C9E3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8C3E22A4364420081C9E3 /* AppCoordinator.swift */; };
 		FAE8C3E52A4364730081C9E3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8C3E42A4364730081C9E3 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		FAE8C3C62A4309570081C9E3 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FAE8C3C52A4309570081C9E3 /* Weather_Kit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FA71A42A2A438B600052E46A /* AddCityCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityCoordinator.swift; sourceTree = "<group>"; };
@@ -200,7 +185,6 @@
 				FAE8C3A72A4308A10081C9E3 /* Sources */,
 				FAE8C3A82A4308A10081C9E3 /* Frameworks */,
 				FAE8C3A92A4308A10081C9E3 /* Resources */,
-				FAE8C3C62A4309570081C9E3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
