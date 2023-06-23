@@ -33,6 +33,7 @@ final class ViewModel {
     //MARK: - initializer
     init(coordinator: MainCoordinator) {
         self.coordinator = coordinator
+        getUserLocationWeather()
         onCityAdded = { city in
             self.getCityWeather(cityName: city)
             self.cityIsAdded = true
@@ -52,6 +53,14 @@ final class ViewModel {
                                              moreData: moreData)
     }
     
+    private func getCityWeather(cityName: String) {
+        weather.getCityWeather(city: cityName)
+    }
+    
+    private func getUserLocationWeather() {
+        weather.getUserLocationWeather()
+    }
+    
     //MARK: - Exposed methods
     func showAddNewCity() {
         coordinator?.showAddCity()
@@ -60,11 +69,7 @@ final class ViewModel {
     func showCityDetails(details: CityWeather) {
         coordinator?.showCityDetails(details: manageCityDetails(details: details))
     }
-    
-    func getCityWeather(cityName: String) {
-        weather.getCityWeather(city: cityName)
-    }
-    
+
     func updateCitiesList() {
         guard let cityWeather = self.weatherDetails else { return }
         citiesList.append(cityWeather)

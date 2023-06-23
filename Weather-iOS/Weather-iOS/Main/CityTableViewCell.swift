@@ -19,6 +19,7 @@ final class CityTableViewCell: UITableViewCell {
     @IBOutlet var maxTemperatureLabel: UILabel!
     @IBOutlet var minTemperatureLabel: UILabel!
     @IBOutlet var weatherImageView: UIImageView!
+    @IBOutlet var containerView: UIView!
     
     // MARK: - Overrides
     override func awakeFromNib() {
@@ -29,10 +30,13 @@ final class CityTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
+        selectionStyle = .none
     }
     
     // MARK: - Private functions
-    private func initUI() {}
+    private func initUI() {
+        containerView.layer.cornerRadius = 10
+    }
     
     // MARK: - Exposed functions
     func setupView(item: CityWeather?) {

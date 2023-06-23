@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA195A2A2A45E03C002D5B75 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA195A292A45E03C002D5B75 /* LocationManager.swift */; };
 		FAE8C39B2A4308540081C9E3 /* Weather_Kit.docc in Sources */ = {isa = PBXBuildFile; fileRef = FAE8C39A2A4308540081C9E3 /* Weather_Kit.docc */; };
 		FAE8C39C2A4308540081C9E3 /* Weather_Kit.h in Headers */ = {isa = PBXBuildFile; fileRef = FAE8C3992A4308540081C9E3 /* Weather_Kit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAE8C3C82A430D5E0081C9E3 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8C3C72A430D5E0081C9E3 /* Weather.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA195A292A45E03C002D5B75 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FAE8C3962A4308540081C9E3 /* Weather_Kit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Weather_Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE8C3992A4308540081C9E3 /* Weather_Kit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Weather_Kit.h; sourceTree = "<group>"; };
 		FAE8C39A2A4308540081C9E3 /* Weather_Kit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Weather_Kit.docc; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA195A282A45E026002D5B75 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FA195A292A45E03C002D5B75 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		FAE8C38C2A4308540081C9E3 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 				FAE8C3C72A430D5E0081C9E3 /* Weather.swift */,
 				FAE8C3C92A43183D0081C9E3 /* Services */,
 				FAE8C3CE2A4326390081C9E3 /* Models */,
+				FA195A282A45E026002D5B75 /* Managers */,
 				FAE8C3992A4308540081C9E3 /* Weather_Kit.h */,
 				FAE8C39A2A4308540081C9E3 /* Weather_Kit.docc */,
 			);
@@ -162,6 +173,7 @@
 			files = (
 				FAE8C3C82A430D5E0081C9E3 /* Weather.swift in Sources */,
 				FAE8C3CB2A4318590081C9E3 /* ApiManager.swift in Sources */,
+				FA195A2A2A45E03C002D5B75 /* LocationManager.swift in Sources */,
 				FAE8C39B2A4308540081C9E3 /* Weather_Kit.docc in Sources */,
 				FAE8C3CD2A4319650081C9E3 /* JsonDecodeExtension.swift in Sources */,
 				FAE8C3D02A432DFC0081C9E3 /* Models.swift in Sources */,

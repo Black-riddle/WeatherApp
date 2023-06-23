@@ -8,6 +8,7 @@
 import Foundation
 
 extension Double {
+    // method used to convert kelvin to degree
     func convertKelvinToDegree() -> Int {
         return Int(self - 273.15)
     }

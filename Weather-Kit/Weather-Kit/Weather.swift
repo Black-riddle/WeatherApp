@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-//MARK: typealias
+//MARK: - typealias
 typealias StateHandler = ((Subscribers.Completion<Error>) -> Void)
 typealias ReceivedValue<T>  = (T) -> Void
 
@@ -19,17 +19,21 @@ public enum LoadWeatherDataState {
 
 public class Weather {
     
-    // MARK: Properties
+    // MARK: - Properties
     public var state = PassthroughSubject<LoadWeatherDataState, Never>()
     public var weatherDetails: CityWeather?
     
-    //MARK: Private properties
+    //MARK: - Private properties
     private var cancellable = Set<AnyCancellable>()
     
-    //MARK: init
-    public init() {}
+    //MARK: - init
+    public init() {
+        LocationsManager.shared.onLocationChangedCallback = {
+            self.getUserLocationWeather()
+        }
+    }
     
-    //MARK: getCityWeather
+    //MARK: - Exposed methods
     public func getCityWeather(city: String) {
         let receiveCompletion : StateHandler = { completion in
             switch completion {
@@ -44,6 +48,27 @@ public class Weather {
         }
         
         APIManager().getCityWeather(cityParameter: city)
+            .sink(receiveCompletion: receiveCompletion, receiveValue: receivedValue)
+            .store(in: &cancellable)
+    }
+    
+    public func getUserLocationWeather() {
+        let receiveCompletion : StateHandler = { completion in
+            switch completion {
+            case .finished:
+                self.state.send(.didLoadWeatherData)
+            case .failure(let error) :
+                self.state.send(.error(error))
+            }
+        }
+        let receivedValue : ReceivedValue<CityWeather> = { data in
+            self.weatherDetails = data
+        }
+        guard let latitude = LocationsManager.shared.latitude,
+              let longitude = LocationsManager.shared.longitude else { return }
+        
+        APIManager().getUserLocationWeather(latitude: latitude,
+                                            longitude: longitude)
             .sink(receiveCompletion: receiveCompletion, receiveValue: receivedValue)
             .store(in: &cancellable)
     }

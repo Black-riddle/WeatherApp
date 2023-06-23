@@ -11,9 +11,19 @@ import Combine
 class APIManager {
     
     func getCityWeather(cityParameter: String) -> Future<(CityWeather), Error> {
+        let jsonUrlString = "https://api.openweathermap.org/data/2.5/weather?q=\(cityParameter)&appid=91cdbfcc7952a714bd12d5e9c5f5de5e"
+        return request(jsonUrlString: jsonUrlString)
+        
+    }
+    
+    func getUserLocationWeather(latitude: Double, longitude: Double) -> Future<(CityWeather), Error> {
+        let jsonUrlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=91cdbfcc7952a714bd12d5e9c5f5de5e"
+        return request(jsonUrlString: jsonUrlString)
+        
+    }
+    
+    func request(jsonUrlString: String) -> Future<(CityWeather), Error>  {
         return Future {  promise in
-            
-            let jsonUrlString = "https://api.openweathermap.org/data/2.5/weather?q=\(cityParameter)&appid=91cdbfcc7952a714bd12d5e9c5f5de5e"
             
             guard let url = URL(string: jsonUrlString) else { return }
             
@@ -37,6 +47,5 @@ class APIManager {
                 
             }.resume()
         }
-        
     }
 }

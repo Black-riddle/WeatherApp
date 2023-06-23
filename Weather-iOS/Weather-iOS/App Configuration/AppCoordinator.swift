@@ -24,7 +24,6 @@ class AppCoordinator: Coordinator {
         mainCoordinator.start()
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-        navigationController.navigationBar.isHidden = false
     }
   
 }
