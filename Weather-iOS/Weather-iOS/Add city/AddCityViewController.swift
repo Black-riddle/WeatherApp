@@ -11,6 +11,7 @@ final class AddCityViewController: UIViewController {
     
     //MARK: - IBOutlet
     @IBOutlet var cityTextfield: UITextField!
+    @IBOutlet var validateButton: UIButton!
     
     //MARK: - Properties
     var viewModel: AddCityViewModel?
@@ -18,6 +19,8 @@ final class AddCityViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        cityTextfield.placeholder = "Search for a city"
+        validateButton.tintColor = UIColor(named: "LightBlue")
     }
     
     //MARK: - IBAction

@@ -19,6 +19,7 @@ class CityDetailCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 10
+        backgroundColor = UIColor(named: "LightBlue")
     }
     
     // MARK: - Exposed functions

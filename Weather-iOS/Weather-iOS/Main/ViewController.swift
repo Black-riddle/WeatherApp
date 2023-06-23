@@ -13,6 +13,7 @@ final class ViewController: UIViewController {
     //MARK: - IBOutlets
     @IBOutlet var tableView: UITableView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var searchButton: UIButton!
     
     //MARK: - Properties
     var viewModel: ViewModel?
@@ -23,13 +24,17 @@ final class ViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backButtonTitle = ""
         setupInterface()
         bindData()
     }
     
     //MARK: - Private methods
     private func setupInterface() {
+        title = "WeatherApp"
         activityIndicator.hidesWhenStopped = true
+        searchButton.layer.cornerRadius = 10
+        searchButton.backgroundColor = UIColor(named: "LightBlue")
         initTableView()
     }
     
@@ -63,6 +68,7 @@ final class ViewController: UIViewController {
                            forCellReuseIdentifier: CityTableViewCell.identifier)
         
         tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
     }
     

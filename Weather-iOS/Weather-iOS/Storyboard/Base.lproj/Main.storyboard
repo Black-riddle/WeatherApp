@@ -18,18 +18,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eps-iW-fhk">
-                                <rect key="frame" x="67.666666666666686" y="59" width="258" height="35"/>
+                                <rect key="frame" x="323" y="59" width="50" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="258" id="Ogv-Qi-ctd"/>
+                                    <constraint firstAttribute="width" constant="50" id="Mdv-f6-GzV"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Add new city"/>
+                                <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system">
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="addNewCityAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y9q-Yt-3Yh"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IEq-zw-GKv">
-                                <rect key="frame" x="0.0" y="102" width="393" height="716"/>
+                                <rect key="frame" x="0.0" y="114" width="393" height="704"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="haJ-bf-A7r">
@@ -37,13 +39,13 @@
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="IEq-zw-GKv" firstAttribute="top" secondItem="eps-iW-fhk" secondAttribute="bottom" constant="8" id="7hN-py-dQL"/>
+                            <constraint firstItem="IEq-zw-GKv" firstAttribute="top" secondItem="eps-iW-fhk" secondAttribute="bottom" constant="20" id="7hN-py-dQL"/>
                             <constraint firstItem="eps-iW-fhk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="972-xX-KrL"/>
                             <constraint firstItem="haJ-bf-A7r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bed-GW-qsE"/>
                             <constraint firstItem="IEq-zw-GKv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eL9-cz-DAl"/>
-                            <constraint firstItem="eps-iW-fhk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fh8-bd-AXU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eps-iW-fhk" secondAttribute="trailing" constant="20" id="i0o-j9-eCh"/>
                             <constraint firstItem="haJ-bf-A7r" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i6C-3S-HUG"/>
                             <constraint firstItem="IEq-zw-GKv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qaQ-NX-HvU"/>
                             <constraint firstItem="IEq-zw-GKv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="t3J-S9-loA"/>
@@ -51,6 +53,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="haJ-bf-A7r" id="YgQ-bH-912"/>
+                        <outlet property="searchButton" destination="eps-iW-fhk" id="3MF-j7-tVq"/>
                         <outlet property="tableView" destination="IEq-zw-GKv" id="e7T-pM-EhU"/>
                     </connections>
                 </viewController>
@@ -67,17 +70,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xbx-9G-RHj">
-                                <rect key="frame" x="60" y="409" width="273" height="34"/>
+                                <rect key="frame" x="60" y="120.33333333333331" width="273" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUp-bp-ZOf">
-                                <rect key="frame" x="172.66666666666666" y="479" width="48" height="35"/>
+                                <rect key="frame" x="172.33333333333334" y="190.33333333333334" width="48.666666666666657" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="10Q-ox-n2z"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="tintColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="OK"/>
+                                <buttonConfiguration key="configuration" style="filled" title="OK">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="onButtonTapped:" destination="Ypk-nX-Nh9" eventType="touchUpInside" id="40S-Pa-SDP"/>
                                 </connections>
@@ -93,16 +99,17 @@
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="sMy-jJ-SmD" firstAttribute="trailing" secondItem="Xbx-9G-RHj" secondAttribute="trailing" constant="60" id="358-Ck-UuC"/>
-                            <constraint firstItem="Xbx-9G-RHj" firstAttribute="centerY" secondItem="Mrq-yY-YjS" secondAttribute="centerY" id="6M6-Ej-BUn"/>
                             <constraint firstItem="JUp-bp-ZOf" firstAttribute="centerX" secondItem="Xbx-9G-RHj" secondAttribute="centerX" id="Bgx-QF-oDo"/>
                             <constraint firstItem="JUp-bp-ZOf" firstAttribute="top" secondItem="Xbx-9G-RHj" secondAttribute="bottom" constant="36" id="Hrf-XU-ZZc"/>
                             <constraint firstItem="8cp-Bh-zBf" firstAttribute="top" secondItem="sMy-jJ-SmD" secondAttribute="top" id="ZV2-pv-iFO"/>
+                            <constraint firstItem="Xbx-9G-RHj" firstAttribute="top" secondItem="8cp-Bh-zBf" secondAttribute="bottom" constant="30" id="bQN-Eb-uUU"/>
                             <constraint firstItem="8cp-Bh-zBf" firstAttribute="centerX" secondItem="Mrq-yY-YjS" secondAttribute="centerX" id="d4q-K5-e6N"/>
                             <constraint firstItem="Xbx-9G-RHj" firstAttribute="leading" secondItem="sMy-jJ-SmD" secondAttribute="leading" constant="60" id="qsp-G6-gfJ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cityTextfield" destination="Xbx-9G-RHj" id="ss1-Cv-ANV"/>
+                        <outlet property="validateButton" destination="JUp-bp-ZOf" id="8Yf-8N-EV5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rg4-Mx-W4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -235,11 +242,15 @@
     <resources>
         <image name="arrow.down" catalog="system" width="118" height="128"/>
         <image name="arrow.up" catalog="system" width="118" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
