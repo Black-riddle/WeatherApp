@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA195A2C2A460D99002D5B75 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA195A2B2A460D99002D5B75 /* UITableViewExtension.swift */; };
 		FA71A42B2A438B600052E46A /* AddCityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71A42A2A438B600052E46A /* AddCityCoordinator.swift */; };
 		FA71A42E2A4396720052E46A /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71A42C2A4396720052E46A /* CityTableViewCell.swift */; };
 		FA71A42F2A4396720052E46A /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA71A42D2A4396720052E46A /* CityTableViewCell.xib */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA195A2B2A460D99002D5B75 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		FA71A42A2A438B600052E46A /* AddCityCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityCoordinator.swift; sourceTree = "<group>"; };
 		FA71A42C2A4396720052E46A /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		FA71A42D2A4396720052E46A /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				FA71A4312A4462360052E46A /* DoubleExtension.swift */,
+				FA195A2B2A460D99002D5B75 /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				FAE8C3B12A4308A10081C9E3 /* SceneDelegate.swift in Sources */,
 				FA71A4342A448C020052E46A /* CityDetailsCoordinator.swift in Sources */,
 				FAE8C3E02A4361FB0081C9E3 /* MainCoordinator.swift in Sources */,
+				FA195A2C2A460D99002D5B75 /* UITableViewExtension.swift in Sources */,
 				FA71A4322A4462360052E46A /* DoubleExtension.swift in Sources */,
 				FAE8C3DE2A435EB50081C9E3 /* AddCityViewModel.swift in Sources */,
 			);

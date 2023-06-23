@@ -70,10 +70,16 @@ final class ViewController: UIViewController {
         viewModel?.showAddNewCity()
     }
 }
+
 //MARK: - UITableViewDataSource & UITableViewDelegate
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if viewModel?.citiesList.count == 0 {
+            tableView.setEmptyMessage()
+        } else {
+            tableView.restore()
+        }
         return viewModel?.citiesList.count ?? 0
     }
     
