@@ -79,8 +79,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: CityTableViewCell.identifier,
-                                                 for: indexPath) as! CityTableViewCell
+       guard let cell = tableView.dequeueReusableCell(withIdentifier: CityTableViewCell.identifier,
+                                                      for: indexPath) as? CityTableViewCell
+        else { fatalError("Could not dequeue cell with identifier: \(CityTableViewCell.identifier)") }
+        
         let item = viewModel?.citiesList[indexPath.row]
         cell.setupView(item: item)
         return cell

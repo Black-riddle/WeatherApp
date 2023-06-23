@@ -36,9 +36,10 @@ final class MainCoordinator: Coordinator {
         addCityCoordinator.start()
     }
     
-    func showCityDetails(details: CityWeather) {
-        let cityDetailsCoordinator = CityDetailsCoordinator(navigationController: navigationController)
-        cityDetailsCoordinator.parentCoordinator = self
+    func showCityDetails(details: CityInformationViewModel) {
+        let cityDetailsCoordinator = CityDetailsCoordinator(navigationController: navigationController,
+                                                            cityDetails: details)
+//        cityDetailsCoordinator.parentCoordinator = self
         cityDetailsCoordinator.start()
     }
     

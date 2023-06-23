@@ -39,13 +39,26 @@ final class ViewModel {
         }
     }
     
+    //MARK: - Private methods
+    func manageCityDetails(details: CityWeather) -> CityInformationViewModel {
+        let moreData = AdditionalWeatherData.init(pressure: details.main.pressure,
+                                                  humidity: details.main.humidity,
+                                                  windSpeed: Int(details.wind.speed),
+                                                  feelsLike: Int(details.main.feelsLike))
+        return CityInformationViewModel.init(name: details.name,
+                                             temperature: details.main.temp,
+                                             tempMax: details.main.tempMax,
+                                             tempMin: details.main.tempMin,
+                                             moreData: moreData)
+    }
+    
     //MARK: - Exposed methods
     func showAddNewCity() {
         coordinator?.showAddCity()
     }
     
     func showCityDetails(details: CityWeather) {
-        coordinator?.showCityDetails(details: details)
+        coordinator?.showCityDetails(details: manageCityDetails(details: details))
     }
     
     func getCityWeather(cityName: String) {
