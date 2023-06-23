@@ -8,6 +8,7 @@
 import Foundation
 
 // MARK: - CityInformationViewModel
+// This model contains only weather information that we will display later on city details screen
 struct CityInformationViewModel {
     let name: String
     let temperature: Int
@@ -39,34 +40,45 @@ struct AdditionalWeatherData {
     init(pressure: Int,
          humidity: Int,
          windSpeed: Int,
-         feelsLike: Int) {
+         feelsLike: Double) {
         
         self.pressure = pressure
         self.humidity = humidity
         self.windSpeed = windSpeed
-        self.feelsLike = feelsLike
+        self.feelsLike = feelsLike.convertKelvinToDegree()
         
     }
     
-    func toKeyValueArray() -> [(String, Int)] {
+    func toKeyValueArray() -> [(WeatherDetails, Int)] {
             return [
-                ("pressure", pressure),
-                ("humidity", humidity),
-                ("windSpeed", windSpeed),
-                ("feelsLike", feelsLike)
+                (.pressure, pressure),
+                (.humidity, humidity),
+                (.windSpeed, windSpeed),
+                (.feelsLike, feelsLike)
             ]
         }
 }
 
-//enum weatherDetails {
-//
-//    case pressure
-//    case humidity
-//    case windSpeed
-//    case feelsLike
-//
-//    var title = {
-//
-//    }
-//    var unit
-//}
+enum WeatherDetails {
+    case pressure
+    case humidity
+    case windSpeed
+    case feelsLike
+
+    var title: String {
+        switch self {
+        case .pressure: return "Pressure"
+        case .humidity: return "Humidity"
+        case .feelsLike: return "Feels like"
+        case .windSpeed: return "Wind speed"
+        }
+    }
+    var unit: String {
+        switch self {
+        case .pressure: return "h/pa"
+        case .humidity: return "%"
+        case .feelsLike: return "°"
+        case .windSpeed: return "metre/sec"
+        }
+    }
+}

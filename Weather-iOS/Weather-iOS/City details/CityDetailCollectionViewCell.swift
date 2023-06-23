@@ -22,11 +22,11 @@ class CityDetailCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - Exposed functions
-    func setupView(items: (String, Int)?) {
+    func setupView(items: (WeatherDetails, Int)?) {
         guard let items = items else { return }
         let (key, value) = items
-        titleLabel.text = key
-        valueLabel.text = "\(value)"
+        titleLabel.text = key.title
+        valueLabel.text = "\(value) \(key.unit)"
     }
 
 }

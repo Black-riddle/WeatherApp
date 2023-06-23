@@ -44,7 +44,7 @@ final class ViewModel {
         let moreData = AdditionalWeatherData.init(pressure: details.main.pressure,
                                                   humidity: details.main.humidity,
                                                   windSpeed: Int(details.wind.speed),
-                                                  feelsLike: Int(details.main.feelsLike))
+                                                  feelsLike: details.main.feelsLike)
         return CityInformationViewModel.init(name: details.name,
                                              temperature: details.main.temp,
                                              tempMax: details.main.tempMax,

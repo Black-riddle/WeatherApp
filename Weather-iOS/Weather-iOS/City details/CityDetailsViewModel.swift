@@ -10,7 +10,6 @@ import Foundation
 final class CityDetailsViewModel {
     
     //MARK: - Private properties
-    
     private var cityDetails: CityInformationViewModel
     
     //MARK: - Properties
@@ -28,7 +27,7 @@ final class CityDetailsViewModel {
     var tempMin: String {
         return String(cityDetails.tempMin)
     }
-    var informationList: [(String, Int)] {
+    var informationList: [(WeatherDetails, Int)] {
         return cityDetails.moreData.toKeyValueArray()
     }
     
