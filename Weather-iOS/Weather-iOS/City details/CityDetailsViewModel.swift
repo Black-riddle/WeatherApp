@@ -7,14 +7,14 @@
 
 import Foundation
 
-final class CityDetailsViewModel {
+final class CityDetailsViewModel: CityDetailsViewModelProtocol {
     
     //MARK: - Private properties
-    private var cityDetails: CityInformationViewModel
+    private var cityDetails: CityInformationModel
     
     //MARK: - Properties
     var coordinator: CityDetailsCoordinator?
-    
+
     var cityName: String {
         return cityDetails.name
     }
@@ -33,7 +33,7 @@ final class CityDetailsViewModel {
     
     //MARK: - Initializer
     init(coordinator: CityDetailsCoordinator,
-         cityDetails: CityInformationViewModel) {
+         cityDetails: CityInformationModel) {
         self.coordinator = coordinator
         self.cityDetails = cityDetails
     }

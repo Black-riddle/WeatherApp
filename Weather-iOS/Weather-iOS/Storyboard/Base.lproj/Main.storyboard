@@ -152,6 +152,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Q9I-Re-eSR">
                                                 <rect key="frame" x="0.0" y="1.3333333333333321" width="16.666666666666668" height="26.333333333333336"/>
+                                                <color key="tintColor" red="0.49411764705882355" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRz-uK-hUT">
                                                 <rect key="frame" x="16.666666666666654" y="0.0" width="38.666666666666657" height="28.666666666666668"/>
@@ -169,6 +170,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6un-bm-Zi3">
                                                 <rect key="frame" x="0.0" y="1.3333333333333321" width="16.666666666666668" height="26.333333333333336"/>
+                                                <color key="tintColor" red="0.49411764705882355" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgh-av-UBn">
                                                 <rect key="frame" x="16.666666666666654" y="0.0" width="35.666666666666657" height="28.666666666666668"/>

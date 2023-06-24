@@ -19,7 +19,7 @@ final class AddCityViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        cityTextfield.placeholder = "Search for a city"
+        cityTextfield.placeholder = "Type a city"
         validateButton.tintColor = UIColor(named: "LightBlue")
     }
     

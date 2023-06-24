@@ -36,7 +36,7 @@ final class MainCoordinator: Coordinator {
         addCityCoordinator.start()
     }
     
-    func showCityDetails(details: CityInformationViewModel) {
+    func showCityDetails(details: CityInformationModel) {
         let cityDetailsCoordinator = CityDetailsCoordinator(navigationController: navigationController,
                                                             cityDetails: details)
         cityDetailsCoordinator.start()

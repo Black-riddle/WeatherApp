@@ -12,7 +12,7 @@ import Combine
 typealias StateHandler = ((Subscribers.Completion<Error>) -> Void)
 typealias ReceivedValue<T>  = (T) -> Void
 
-final class ViewModel {
+final class ViewModel: NSObject, ViewModelProtocol {
     
     //MARK: - Properties
     var state: PassthroughSubject<LoadWeatherDataState, Never> {
@@ -32,6 +32,7 @@ final class ViewModel {
     
     //MARK: - initializer
     init(coordinator: MainCoordinator) {
+        super.init()
         self.coordinator = coordinator
         getUserLocationWeather()
         onCityAdded = { city in
@@ -41,12 +42,12 @@ final class ViewModel {
     }
     
     //MARK: - Private methods
-    func manageCityDetails(details: CityWeather) -> CityInformationViewModel {
+    func manageCityDetails(details: CityWeather) -> CityInformationModel {
         let moreData = AdditionalWeatherData.init(pressure: details.main.pressure,
                                                   humidity: details.main.humidity,
                                                   windSpeed: Int(details.wind.speed),
                                                   feelsLike: details.main.feelsLike)
-        return CityInformationViewModel.init(name: details.name,
+        return CityInformationModel.init(name: details.name,
                                              temperature: details.main.temp,
                                              tempMax: details.main.tempMax,
                                              tempMin: details.main.tempMin,

@@ -20,6 +20,7 @@ final class CityTableViewCell: UITableViewCell {
     @IBOutlet var minTemperatureLabel: UILabel!
     @IBOutlet var weatherImageView: UIImageView!
     @IBOutlet var containerView: UIView!
+    @IBOutlet var descriptionLabel: UILabel!
     
     // MARK: - Overrides
     override func awakeFromNib() {
@@ -49,6 +50,7 @@ final class CityTableViewCell: UITableViewCell {
         temperatureValueLabel.text = "\(temperature)°"
         maxTemperatureLabel.text = "\(tempMax)°"
         minTemperatureLabel.text = "\(tempMin)°"
+        descriptionLabel.text = item?.weather.first?.description
         guard let icon = icon else { return }
         weatherImageView?.image = UIImage(named: icon)
     }

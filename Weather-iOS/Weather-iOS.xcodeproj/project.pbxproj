@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FA195A2C2A460D99002D5B75 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA195A2B2A460D99002D5B75 /* UITableViewExtension.swift */; };
+		FA195A2E2A4636EC002D5B75 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA195A2D2A4636EC002D5B75 /* ViewModelProtocol.swift */; };
+		FA195A302A46386A002D5B75 /* AddCityViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA195A2F2A46386A002D5B75 /* AddCityViewModelProtocol.swift */; };
+		FA195A322A4638E8002D5B75 /* CityDetailsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA195A312A4638E8002D5B75 /* CityDetailsViewModelProtocol.swift */; };
 		FA71A42B2A438B600052E46A /* AddCityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71A42A2A438B600052E46A /* AddCityCoordinator.swift */; };
 		FA71A42E2A4396720052E46A /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71A42C2A4396720052E46A /* CityTableViewCell.swift */; };
 		FA71A42F2A4396720052E46A /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA71A42D2A4396720052E46A /* CityTableViewCell.xib */; };
@@ -31,10 +34,14 @@
 		FAE8C3E02A4361FB0081C9E3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8C3DF2A4361FB0081C9E3 /* MainCoordinator.swift */; };
 		FAE8C3E32A4364420081C9E3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8C3E22A4364420081C9E3 /* AppCoordinator.swift */; };
 		FAE8C3E52A4364730081C9E3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8C3E42A4364730081C9E3 /* Coordinator.swift */; };
+		FAE9BF482A46604B00D3071E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE9BF472A46604B00D3071E /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA195A2B2A460D99002D5B75 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		FA195A2D2A4636EC002D5B75 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		FA195A2F2A46386A002D5B75 /* AddCityViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModelProtocol.swift; sourceTree = "<group>"; };
+		FA195A312A4638E8002D5B75 /* CityDetailsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewModelProtocol.swift; sourceTree = "<group>"; };
 		FA71A42A2A438B600052E46A /* AddCityCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityCoordinator.swift; sourceTree = "<group>"; };
 		FA71A42C2A4396720052E46A /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		FA71A42D2A4396720052E46A /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
@@ -60,6 +67,7 @@
 		FAE8C3DF2A4361FB0081C9E3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		FAE8C3E22A4364420081C9E3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FAE8C3E42A4364730081C9E3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FAE9BF472A46604B00D3071E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,7 @@
 			children = (
 				FA71A4312A4462360052E46A /* DoubleExtension.swift */,
 				FA195A2B2A460D99002D5B75 /* UITableViewExtension.swift */,
+				FAE9BF472A46604B00D3071E /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -131,6 +140,7 @@
 			children = (
 				FAE8C3B22A4308A10081C9E3 /* ViewController.swift */,
 				FAE8C3D12A4347650081C9E3 /* ViewModel.swift */,
+				FA195A2D2A4636EC002D5B75 /* ViewModelProtocol.swift */,
 				FAE8C3DF2A4361FB0081C9E3 /* MainCoordinator.swift */,
 				FA71A42C2A4396720052E46A /* CityTableViewCell.swift */,
 				FA71A42D2A4396720052E46A /* CityTableViewCell.xib */,
@@ -144,6 +154,7 @@
 			children = (
 				FAE8C3D72A435E5E0081C9E3 /* CityDetailsViewController.swift */,
 				FAE8C3D92A435E760081C9E3 /* CityDetailsViewModel.swift */,
+				FA195A312A4638E8002D5B75 /* CityDetailsViewModelProtocol.swift */,
 				FA71A4332A448C020052E46A /* CityDetailsCoordinator.swift */,
 				FA7C7CC12A459CF8007F3014 /* CityDetailCollectionViewCell.swift */,
 				FA7C7CC22A459CF8007F3014 /* CityDetailCollectionViewCell.xib */,
@@ -156,6 +167,7 @@
 			children = (
 				FAE8C3DB2A435E970081C9E3 /* AddCityViewController.swift */,
 				FAE8C3DD2A435EB50081C9E3 /* AddCityViewModel.swift */,
+				FA195A2F2A46386A002D5B75 /* AddCityViewModelProtocol.swift */,
 				FA71A42A2A438B600052E46A /* AddCityCoordinator.swift */,
 			);
 			path = "Add city";
@@ -252,14 +264,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE8C3DA2A435E760081C9E3 /* CityDetailsViewModel.swift in Sources */,
+				FA195A302A46386A002D5B75 /* AddCityViewModelProtocol.swift in Sources */,
 				FA71A42B2A438B600052E46A /* AddCityCoordinator.swift in Sources */,
 				FAE8C3DC2A435E970081C9E3 /* AddCityViewController.swift in Sources */,
+				FA195A2E2A4636EC002D5B75 /* ViewModelProtocol.swift in Sources */,
 				FAE8C3E32A4364420081C9E3 /* AppCoordinator.swift in Sources */,
 				FA7C7CC02A44F348007F3014 /* CityInformationViewModel.swift in Sources */,
 				FAE8C3B32A4308A10081C9E3 /* ViewController.swift in Sources */,
 				FA7C7CC32A459CF8007F3014 /* CityDetailCollectionViewCell.swift in Sources */,
 				FAE8C3AF2A4308A10081C9E3 /* AppDelegate.swift in Sources */,
 				FAE8C3D82A435E5E0081C9E3 /* CityDetailsViewController.swift in Sources */,
+				FA195A322A4638E8002D5B75 /* CityDetailsViewModelProtocol.swift in Sources */,
 				FAE8C3E52A4364730081C9E3 /* Coordinator.swift in Sources */,
 				FA71A42E2A4396720052E46A /* CityTableViewCell.swift in Sources */,
 				FAE8C3D22A4347650081C9E3 /* ViewModel.swift in Sources */,
@@ -268,6 +283,7 @@
 				FAE8C3E02A4361FB0081C9E3 /* MainCoordinator.swift in Sources */,
 				FA195A2C2A460D99002D5B75 /* UITableViewExtension.swift in Sources */,
 				FA71A4322A4462360052E46A /* DoubleExtension.swift in Sources */,
+				FAE9BF482A46604B00D3071E /* UIViewControllerExtension.swift in Sources */,
 				FAE8C3DE2A435EB50081C9E3 /* AddCityViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

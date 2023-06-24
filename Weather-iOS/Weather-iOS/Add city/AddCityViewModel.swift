@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class AddCityViewModel {
+final class AddCityViewModel: NSObject, AddCityViewModelProtocol  {
     
     //MARK: - Properties
     var coordinator: AddCityCoordinator?

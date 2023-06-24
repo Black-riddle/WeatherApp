@@ -12,14 +12,14 @@ final class CityDetailsCoordinator: Coordinator {
     
     //MARK: - Properties
     weak var parentCoordinator: MainCoordinator?
-    var cityDetails: CityInformationViewModel
+    var cityDetails: CityInformationModel
     
     //MARK: - Private properties
     private var navigationController : UINavigationController
     
     //MARK: - Init
     init(navigationController: UINavigationController,
-         cityDetails: CityInformationViewModel) {
+         cityDetails: CityInformationModel) {
         self.navigationController = navigationController
         self.cityDetails = cityDetails
     }

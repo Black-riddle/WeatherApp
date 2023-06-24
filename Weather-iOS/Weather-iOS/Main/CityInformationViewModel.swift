@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - CityInformationViewModel
 // This model contains only weather information that we will display later on city details screen
-struct CityInformationViewModel {
+struct CityInformationModel {
     let name: String
     let temperature: Int
     let tempMax: Int

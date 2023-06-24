@@ -32,11 +32,21 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcR-cB-7ug">
+                        <rect key="frame" x="86" y="62.333333333333336" width="184" height="20.333333333333336"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="184" id="i3E-ta-Feo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R79-x4-lOU">
-                        <rect key="frame" x="278.33333333333331" y="64" width="88.666666666666686" height="27"/>
+                        <rect key="frame" x="278.33333333333331" y="59" width="88.666666666666686" height="27"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7Tt-x2-QiB">
                                 <rect key="frame" x="0.0" y="1.3333333333333321" width="16.666666666666668" height="24.666666666666668"/>
+                                <color key="tintColor" red="0.49411764705882355" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90x-2f-E4C">
                                 <rect key="frame" x="16.666666666666686" y="0.0" width="27.666666666666671" height="27"/>
@@ -46,6 +56,7 @@
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iaL-Gs-Hif">
                                 <rect key="frame" x="44.333333333333371" y="1.3333333333333321" width="16.666666666666671" height="24.666666666666668"/>
+                                <color key="tintColor" red="0.49411764705882355" green="0.92549019610000005" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWI-JY-d2t">
                                 <rect key="frame" x="60.999999999999993" y="0.0" width="27.666666666666664" height="27"/>
@@ -75,11 +86,13 @@
                     <constraint firstItem="nsI-ld-msj" firstAttribute="trailing" secondItem="vDX-cN-Kd6" secondAttribute="trailing" constant="13" id="ATf-Dx-CFf"/>
                     <constraint firstItem="nsI-ld-msj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="AvV-RA-xlg"/>
                     <constraint firstAttribute="trailing" secondItem="nsI-ld-msj" secondAttribute="trailing" constant="20" id="Mf4-Gq-Bcr"/>
+                    <constraint firstItem="p7L-e6-6ZF" firstAttribute="centerY" secondItem="R79-x4-lOU" secondAttribute="centerY" id="PjO-Jl-WtF"/>
                     <constraint firstItem="Ywt-nZ-0RH" firstAttribute="leading" secondItem="nsI-ld-msj" secondAttribute="leading" constant="13" id="SyA-wH-hZn"/>
                     <constraint firstItem="nsI-ld-msj" firstAttribute="trailing" secondItem="R79-x4-lOU" secondAttribute="trailing" constant="13" id="cA4-zg-xNt"/>
                     <constraint firstAttribute="bottom" secondItem="nsI-ld-msj" secondAttribute="bottom" constant="5" id="hVI-2B-JqS"/>
                     <constraint firstItem="vDX-cN-Kd6" firstAttribute="centerY" secondItem="Ywt-nZ-0RH" secondAttribute="centerY" id="kMZ-aF-UWE"/>
-                    <constraint firstAttribute="bottom" secondItem="R79-x4-lOU" secondAttribute="bottom" constant="9" id="qd8-mM-8xT"/>
+                    <constraint firstItem="AcR-cB-7ug" firstAttribute="centerY" secondItem="p7L-e6-6ZF" secondAttribute="centerY" id="lCf-fw-XRH"/>
+                    <constraint firstItem="AcR-cB-7ug" firstAttribute="leading" secondItem="p7L-e6-6ZF" secondAttribute="trailing" constant="8" id="oxj-zS-Ztu"/>
                     <constraint firstItem="p7L-e6-6ZF" firstAttribute="leading" secondItem="Ywt-nZ-0RH" secondAttribute="leading" id="tYF-vz-xaH"/>
                     <constraint firstItem="nsI-ld-msj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="zZq-lt-5ps"/>
                 </constraints>
@@ -89,6 +102,7 @@
             <connections>
                 <outlet property="cityNameLabel" destination="Ywt-nZ-0RH" id="o0y-fw-sJ9"/>
                 <outlet property="containerView" destination="nsI-ld-msj" id="EbZ-vi-UHO"/>
+                <outlet property="descriptionLabel" destination="AcR-cB-7ug" id="Ub6-Kr-nfs"/>
                 <outlet property="maxTemperatureLabel" destination="90x-2f-E4C" id="nec-cA-AIU"/>
                 <outlet property="minTemperatureLabel" destination="bWI-JY-d2t" id="D4E-Pd-4ow"/>
                 <outlet property="temperatureValueLabel" destination="vDX-cN-Kd6" id="E70-E6-RTl"/>
