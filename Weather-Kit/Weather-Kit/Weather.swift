@@ -9,12 +9,12 @@ import Foundation
 import Combine
 
 //MARK: - typealias
-typealias StateHandler = ((Subscribers.Completion<Error>) -> Void)
-typealias ReceivedValue<T>  = (T) -> Void
+typealias StateHandler = (Subscribers.Completion<Error>) -> Void
+typealias ReceivedValue<T> = (T) -> Void
 
 public enum LoadWeatherDataState {
     case didLoadWeatherData
-    case error(Error)
+    case error(WError)
 }
 
 public class Weather {
@@ -40,7 +40,7 @@ public class Weather {
             case .finished:
                 self.state.send(.didLoadWeatherData)
             case .failure(let error) :
-                self.state.send(.error(error))
+                self.state.send(.error(error as? WError ?? WError()))
             }
         }
         let receivedValue : ReceivedValue<CityWeather> = { data in
@@ -58,7 +58,7 @@ public class Weather {
             case .finished:
                 self.state.send(.didLoadWeatherData)
             case .failure(let error) :
-                self.state.send(.error(error))
+                self.state.send(.error(error as? WError ?? WError()))
             }
         }
         let receivedValue : ReceivedValue<CityWeather> = { data in

@@ -24,7 +24,12 @@ extension JSONDecoder {
             return .success(item)
             
         } catch {
-            return .failure(error)
+            do {
+                let item = try self.decode(WError.self, from: data)
+                return .failure(item)
+            } catch {
+                return .failure(error)
+            }
         }
     }
 }

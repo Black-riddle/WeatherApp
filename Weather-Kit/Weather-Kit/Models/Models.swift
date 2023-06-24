@@ -150,3 +150,9 @@ public struct Wind: Codable {
         self.deg = deg
     }
 }
+// MARK: - Error
+public class WError: Error, Decodable {
+
+    public var cod: String?
+    public var message: String?
+}

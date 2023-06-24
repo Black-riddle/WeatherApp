@@ -22,7 +22,7 @@ class APIManager {
         
     }
     
-    func request(jsonUrlString: String) -> Future<(CityWeather), Error>  {
+    func request(jsonUrlString: String) -> Future<(CityWeather), Error> {
         return Future {  promise in
             
             guard let url = URL(string: jsonUrlString) else { return }

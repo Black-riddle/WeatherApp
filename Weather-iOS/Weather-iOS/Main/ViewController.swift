@@ -49,7 +49,11 @@ final class ViewController: UIViewController {
             }
             switch state {
             case .didLoadWeatherData: self.updateUI()
-            case .error(_): break
+            case .error(let error ):
+                DispatchQueue.main.async {
+                    guard let message = error.message else { return }
+                    self.showCAlertView(message: message, title: "")
+                }
             }
         }.store(in: &cancellable)
     }

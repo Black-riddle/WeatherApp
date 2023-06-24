@@ -7,55 +7,23 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FF4AD2FA-17D5-4DC4-9B53-9D3C0EAC985D"
+            uuid = "312C141F-7F3B-4DDF-AE39-4675C88A7621"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Weather-Kit/Weather-Kit/Weather.swift"
+            filePath = "Weather-Kit/Weather-Kit/Services/ApiManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "getUserLocationWeather()"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "request(jsonUrlString:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "154AD4A0-E80D-45E9-AF1B-F27F7F0393CD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Weather-Kit/Weather-Kit/Weather.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "getUserLocationWeather()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6206E0A6-4FD1-4B5C-BB16-606BF10D28A5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Weather-Kit/Weather-Kit/Weather.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "getCityWeather(city:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "04D0E219-3D34-4E9D-BC0D-60AE3496FB20"
+            uuid = "848E8899-B847-45FA-A9C6-5510133177E0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -71,80 +39,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4B3DD5F3-53D3-434E-B94A-1E0E950BAEAE"
+            uuid = "04489134-F750-43A9-B428-961EF5C3B952"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Weather-iOS/Weather-iOS/Main/ViewController.swift"
+            filePath = "Weather-Kit/Weather-Kit/Services/JsonDecodeExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "parseData(data:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D0E18AFE-34B2-48EC-92E5-5B6EE5AB6248"
+            uuid = "547E1A4D-619A-4398-8829-03A1063D540F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Weather-iOS/Weather-iOS/Main/ViewController.swift"
+            filePath = "Weather-Kit/Weather-Kit/Services/JsonDecodeExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "decodeResponse(from:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0742D200-C784-4A25-BABB-2F23237506B4"
+            uuid = "64951749-BF6F-4913-AE50-98B18E00F2E3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Weather-iOS/Weather-iOS/Main/ViewController.swift"
+            filePath = "Weather-Kit/Weather-Kit/Services/JsonDecodeExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "bindData()"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "decodeResponse(from:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DE3FCD9F-BE59-4FFA-8012-A7496F671140"
+            uuid = "0CFDDD6A-2F96-4EA4-A9A5-C2E75FB9BED5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Weather-iOS/Weather-iOS/Main/ViewController.swift"
+            filePath = "Weather-Kit/Weather-Kit/Services/JsonDecodeExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "updateUI()"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "parseData(data:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8C41A928-412A-4CCA-8589-46BB7AFEF9B4"
+            uuid = "B79D322E-763C-4E8A-A19C-ACC9698037EC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Weather-iOS/Weather-iOS/Main/ViewController.swift"
+            filePath = "Weather-Kit/Weather-Kit/Services/JsonDecodeExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "updateUI()"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "parseData(data:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
