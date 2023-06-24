@@ -8,33 +8,30 @@
 import Foundation
 import CoreLocation
 
+// This manager allow to get user current locations
 class LocationsManager: NSObject, CLLocationManagerDelegate {
     
-    static let shared =  LocationsManager()
-    var userLocation: CLLocation?
-    var latitude: Double? {
-        return userLocation?.coordinate.latitude
-    }
-    var longitude: Double? {
-        return userLocation?.coordinate.longitude
-    }
+    //MARK: - Private properties
     private var locationManager: CLLocationManager?
     
+    //MARK: - Properties
     var onLocationChangedCallback: () -> () = {}
-    @Published var isLoading = false
-    
+    static let shared =  LocationsManager()
+    var userLocation: CLLocation?
+
+    //MARK: - init
     override init() {
         super.init()
         determineMyCurrentLocation()
     }
-    
-    func determineMyCurrentLocation() {
+    //MARK: - Private method
+    private func determineMyCurrentLocation() {
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.desiredAccuracy = kCLLocationAccuracyBest
         locationManager?.requestWhenInUseAuthorization()
     }
-    
+    //MARK: - CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             return

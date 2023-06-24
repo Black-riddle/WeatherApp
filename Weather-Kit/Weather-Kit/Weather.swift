@@ -27,13 +27,12 @@ public class Weather {
     private var cancellable = Set<AnyCancellable>()
     
     //MARK: - init
-    public init() {
-        LocationsManager.shared.onLocationChangedCallback = {
-            self.getUserLocationWeather()
-        }
-    }
+    public init() {}
     
     //MARK: - Exposed methods
+    /// This method allows getting weather for a city
+    /// - Parameters:
+    ///   - city: String
     public func getCityWeather(city: String) {
         let receiveCompletion : StateHandler = { completion in
             switch completion {
@@ -51,25 +50,34 @@ public class Weather {
             .sink(receiveCompletion: receiveCompletion, receiveValue: receivedValue)
             .store(in: &cancellable)
     }
-    
+    // This method allows getting user location
     public func getUserLocationWeather() {
-        let receiveCompletion : StateHandler = { completion in
-            switch completion {
-            case .finished:
-                self.state.send(.didLoadWeatherData)
-            case .failure(let error) :
-                self.state.send(.error(error as? WError ?? WError()))
+        LocationsManager.shared.onLocationChangedCallback = {
+            if let location = LocationsManager.shared.userLocation {
+                let latitude = location.coordinate.latitude
+                let longitude = location.coordinate.longitude
+                getUserLocationWeather(latitude: latitude, longitude: longitude)
+            } else {
+                // Failed to obtain a valid location
+                print("Failed to get current location.")
             }
         }
-        let receivedValue : ReceivedValue<CityWeather> = { data in
-            self.weatherDetails = data
+        func getUserLocationWeather(latitude: Double, longitude: Double) {
+            let receiveCompletion : StateHandler = { completion in
+                switch completion {
+                case .finished:
+                    self.state.send(.didLoadWeatherData)
+                case .failure(let error) :
+                    self.state.send(.error(error as? WError ?? WError()))
+                }
+            }
+            let receivedValue : ReceivedValue<CityWeather> = { data in
+                self.weatherDetails = data
+            }
+            APIManager().getUserLocationWeather(latitude: latitude,
+                                                longitude: longitude)
+                .sink(receiveCompletion: receiveCompletion, receiveValue: receivedValue)
+                .store(in: &cancellable)
         }
-        guard let latitude = LocationsManager.shared.latitude,
-              let longitude = LocationsManager.shared.longitude else { return }
-        
-        APIManager().getUserLocationWeather(latitude: latitude,
-                                            longitude: longitude)
-            .sink(receiveCompletion: receiveCompletion, receiveValue: receivedValue)
-            .store(in: &cancellable)
     }
 }
