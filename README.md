@@ -36,4 +36,4 @@ state.sink { state in
         }      
 }.store(in: &cancellable)
 ```
-PS: The returned error is of type WError, You can access message by **error.message** & code error by **error.cod**.
+PS: The returned error is of type WError, you can access message by **error.message** & error code by **error.cod**.
